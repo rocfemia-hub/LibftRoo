@@ -1,18 +1,33 @@
-#include <stddef.h>
-void *ft_memset(void *s, int c, size_t n)
-{
-    unsigned char *ptr;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/18 16:10:58 by rocfemia          #+#    #+#             */
+/*   Updated: 2024/09/20 11:22:56 by rocfemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    ptr = (unsigned char *)s;
-    while (n--)
-        *ptr++ = (unsigned char)c;
-    return (s);
+#include "libft.h"
+
+void	*ft_memset(void *s, int c, size_t n)
+{
+	unsigned char	*ptr;
+
+	ptr = (unsigned char *)s;
+	while (n--)
+		*ptr++ = (unsigned char)c;
+	return (s);
 }
 /*#include <stdio.h>
-int main()
+int	main()
 {
-    char str[20] = "patatita";
-    printf("%s\n", str);
-    ft_memset(str, '*', 4);
-    printf("%s\n", str);
+	char str[8] = "patatita";
+	printf("%s\n", str);
+	ft_memset(str, '*', 4);
+	printf("%s\n", str);
+	return (0);
 }*/
+/*ft_memset(str+4, '*', 4);*/

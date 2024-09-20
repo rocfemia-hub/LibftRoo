@@ -1,15 +1,28 @@
-#include <stddef.h>
-size_t ft_strlen(const char *s)
-{
-    int i;
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/09/18 16:11:03 by rocfemia          #+#    #+#             */
+/*   Updated: 2024/09/20 11:22:47 by rocfemia         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-    i = 0;
-    while(s[i] != '\0')
-        i++;
-    return (i);
+#include "libft.h"
+
+size_t	ft_strlen(const char *s)
+{
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+		i++;
+	return (i);
 }
 /*#include <stdio.h>
-int main()
+int	main(void)
 {
-    printf("%ld\n", ft_strlen("patata"));
+	printf("%ld\n", ft_strlen("patata"));
 }*/

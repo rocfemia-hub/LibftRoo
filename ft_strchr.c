@@ -1,30 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 16:10:36 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/20 11:21:17 by rocfemia         ###   ########.fr       */
+/*   Created: 2024/09/19 00:07:03 by rocfemia          #+#    #+#             */
+/*   Updated: 2024/09/20 11:23:19 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_isalpha(int c)
+char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
 	i = 0;
-	if ((c >= 65 && c <= 90) || (c >= 97 && c <= 122))
-		i = 1;
-	else
-		i = 0;
-	return (i);
+	while (s[i] != '\0')
+	{
+		if (s[i] == c)
+		{
+			return ((char *)&s[i]);
+		}
+		i++;
+	}
+	return (NULL);
 }
 /*#include <stdio.h>
+
 int	main(void)
 {
-	printf("%d\n", ft_isalpha('h'));
+	printf("%s\n", ft_strchr("picota", 'c'));
+	return (0);
 }*/
+/*int *ptr;
+int		x = 5;
+int		*y;
+ptr = &x;
+*ptr = 7
+ptr = y*/
