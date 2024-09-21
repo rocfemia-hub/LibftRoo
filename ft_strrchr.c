@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   libft.h                                            :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/20 10:58:41 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/20 11:33:38 by rocfemia         ###   ########.fr       */
+/*   Created: 2024/09/20 11:24:52 by rocfemia          #+#    #+#             */
+/*   Updated: 2024/09/20 16:49:06 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef LIBFT.H
-#define LIBFT.H
+#include "libft.h"
 
-#include <stddef.h>
+size_t	ft_strlen(const char *s);
 
-int	ft_isalpha(int c)
-int	ft_isdigit(int c)
-int	ft_isalnum(int c)
-int	ft_isascii(int c)
-int	ft_isprint(int c)
-size_t	ft_strlen(const char *s)
-void	*ft_memset(void *s, int c, size_t n)
-void	ft_bzero(void *s, size_t n)
-void *ft_memcpy(void *dest, const void *src, size_t n)
+char	*ft_strrchr(const char *s, int c)
+{
+	int	i;
 
-char	*ft_strchr(const char *s, int c)
+	i = ft_strlen(s) - 1;
+	while (s[i] >= 0)
+	{
+		if (s[i] == c)
+		{
+			return ((char *)&s[i]);
+		}
+		i--;
+	}
+	return (NULL);
+}
+/*#include <stdio.h>
 
-#endif
+int	main(void)
+{
+	//const char *s = "picotichuela";
+	//printf("%c\n", *s);
+	printf("%s\n", ft_strrchr("picotichuela", 'c'));
+	return (0);
+}*/
