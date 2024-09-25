@@ -1,25 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_toupper.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/23 00:10:29 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/23 12:41:44 by roo              ###   ########.fr       */
+/*   Created: 2024/09/23 12:44:37 by roo               #+#    #+#             */
+/*   Updated: 2024/09/23 16:53:43 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int	ft_toupper(int c)
+int ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	if (c >= 97 && c <= 122)
-		return (c - 32);
-	return (c);
+    int i;
+
+    i  = 0;
+    while ((s1[i] || s2[i]) && i < n)
+    {
+        if (s1[i] != s2[i])
+            return(s1[i] - s2[i]);
+        i++;
+    }
+    return (0);
 }
 /*#include <stdio.h>
 int main ()
 {
-	printf("%c\n", ft_toupper('s'));
+    printf("%d\n", ft_strncmp("patatita", "patata", 1));
+    return(0);
 }*/
