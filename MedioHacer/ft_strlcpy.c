@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 19:45:03 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/26 01:51:30 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/09/26 02:27:10 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,15 +17,19 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
     int i;
 
     i = 0;
-    while (src[i] != '\0' && i < size)
+    while (src[i] && dst[i] && i < size - 1)
     {
         dst[i] = src[i];
+        i++;
     }
     return (ft_strlen(src));
 }
 #include <stdio.h>
+#include <bsd/string.h>
 int main()
 {
-    printf("%zu\n", ft_strlcpy("patata", "picota", 4));
+    char *patata = "patata";
+    char *tetota = "tetota";
+    printf("%zu\n", ft_strlcpy(patata, tetota, 4));
     return(0);
 }
