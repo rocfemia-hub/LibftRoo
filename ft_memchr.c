@@ -6,7 +6,7 @@
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 03:58:04 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/25 19:46:35 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/09/30 16:49:10 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	return (NULL);
 }
 /*#include <stdio.h>
-
 int	main(void)
 {
 	printf("%s\n", (char *) ft_memchr("picota", 'c', 6));

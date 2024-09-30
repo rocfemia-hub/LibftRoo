@@ -6,7 +6,7 @@
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 11:24:52 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/20 16:49:06 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/09/30 16:58:22 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strrchr(const char *s, int c)
 	return (NULL);
 }
 /*#include <stdio.h>
-
 int	main(void)
 {
 	//const char *s = "picotichuela";

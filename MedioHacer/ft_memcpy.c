@@ -1,33 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 15:59:52 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/30 16:48:57 by rocfemia         ###   ########.fr       */
+/*   Created: 2024/09/30 16:29:42 by rocfemia          #+#    #+#             */
+/*   Updated: 2024/09/30 20:28:25 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	unsigned char	*ptr;
+	int		i;
+	char	*d;
+	char	*s;
 
-	ptr = (unsigned char *)s;
-	while (n != '\0')
+	i = 0;
+	d = (char *)dest;
+	s = (char *)src;
+	while (d < n)
 	{
-		*ptr++ = 0;
-		n--;
 	}
 }
-/*#include <stdio.h>
+#include <stdio.h>
+
 int	main(void)
 {
-	char str[10] = "patatita";
-	printf("%s\n", str);
-	ft_bzero(str, 10);
-	printf("%s\n", str);
-}*/
+	printf("%s\n" ft_memcpy(/*??????*/));
+	return (0);
+}

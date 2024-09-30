@@ -1,33 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 15:59:52 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/30 16:48:57 by rocfemia         ###   ########.fr       */
+/*   Created: 2024/09/30 18:45:59 by rocfemia          #+#    #+#             */
+/*   Updated: 2024/09/30 20:36:15 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putchar_fd(char c, int fd)
 {
-	unsigned char	*ptr;
-
-	ptr = (unsigned char *)s;
-	while (n != '\0')
-	{
-		*ptr++ = 0;
-		n--;
-	}
+	write(fd, &c, 1);
 }
-/*#include <stdio.h>
-int	main(void)
+/*int main (void)
 {
-	char str[10] = "patatita";
-	printf("%s\n", str);
-	ft_bzero(str, 10);
-	printf("%s\n", str);
+	ft_putchar_fd('c', 2); //0, 1 y 2 son para consola
+	return(0);
 }*/

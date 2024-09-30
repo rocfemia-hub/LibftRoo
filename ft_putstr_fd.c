@@ -1,33 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_bzero.c                                         :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/18 15:59:52 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/30 16:48:57 by rocfemia         ###   ########.fr       */
+/*   Created: 2024/09/30 18:43:30 by rocfemia          #+#    #+#             */
+/*   Updated: 2024/09/30 20:36:23 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_bzero(void *s, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned char	*ptr;
+	int	i;
 
-	ptr = (unsigned char *)s;
-	while (n != '\0')
+	i = 0;
+	while (s[i] != '\0')
 	{
-		*ptr++ = 0;
-		n--;
+		write(fd, &s[i], 1);
+		i++;
 	}
 }
-/*#include <stdio.h>
+/*#include <fcntl.h>
 int	main(void)
 {
-	char str[10] = "patatita";
-	printf("%s\n", str);
-	ft_bzero(str, 10);
-	printf("%s\n", str);
+	char str[] = "picota";
+    int fd = open("pipa.txt", O_WRONLY);
+	ft_putstr_fd(str, fd);
+	return(0);
 }*/
