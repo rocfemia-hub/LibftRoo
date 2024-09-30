@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/25 19:45:03 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/26 13:15:11 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/09/30 13:25:28 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,10 +32,10 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 int	main(void)
 {
 	char *str1 = strdup("aguacate");
-	char *str2 = strdup("tetota");
+	char *str2 = strdup("patata");
 	printf("%zu\n", ft_strlcpy(str1, str2, 0));
 	return(0);
 //Hay que reservar los strings con malloc 
 //(strdup --> duplica string reservando espacio de memoria con malloc) 
-//para evitar un sf
+//para evitar un seg.f
 }*/
