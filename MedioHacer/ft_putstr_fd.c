@@ -1,37 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/10/01 03:01:35 by roo               #+#    #+#             */
-/*   Updated: 2024/10/01 16:06:12 by roo              ###   ########.fr       */
+/*   Created: 2024/09/30 18:43:30 by rocfemia          #+#    #+#             */
+/*   Updated: 2024/10/01 15:30:30 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				ft_putnbr_fd(int n, int fd)
+void	ft_putstr_fd(char *s, int fd)
 {
-    if (n == -2147483648)
-    {
-        ft_putstr_fd("-2147483648", fd);
-    }
-    else if (n < 0)
-    {
-        ft_putchar_fd('-', fd);
-        ft_putnbr_fd(-n, fd);
-    }
-    else if (n > 9)
-    {
-        ft_putnbr_fd((n / 10), fd);
-        ft_putnbr_fd((n % 10), fd);
-    }
-    else
-        ft_putchar_fd((n + '0'), fd);
+	int	i;
+
+	i = 0;
+	while (s[i] != '\0')
+	{
+		write(fd, &s[i], 1);
+		i++;
+	}
 }
-/*int   main()
+/*#include <fcntl.h>
+int	main(void)
 {
-    ft_putnbr_fd(-2147483648, 1);
+	char str[] = "picota";
+    int fd = open("pipa.txt", O_WRONLY);
+	ft_putstr_fd(str, fd);
+	return(0);
 }*/
