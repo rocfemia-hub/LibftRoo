@@ -3,35 +3,33 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 03:01:35 by roo               #+#    #+#             */
-/*   Updated: 2024/10/01 16:06:12 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/01 23:31:47 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void				ft_putnbr_fd(int n, int fd)
+void	ft_putnbr_fd(int n, int fd)
 {
-    if (n == -2147483648)
-    {
-        ft_putstr_fd("-2147483648", fd);
-    }
-    else if (n < 0)
-    {
-        ft_putchar_fd('-', fd);
-        ft_putnbr_fd(-n, fd);
-    }
-    else if (n > 9)
-    {
-        ft_putnbr_fd((n / 10), fd);
-        ft_putnbr_fd((n % 10), fd);
-    }
-    else
-        ft_putchar_fd((n + '0'), fd);
+	if (n == -2147483648)
+		ft_putstr_fd("-2147483648", fd);
+	else if (n < 0)
+	{
+		ft_putchar_fd('-', fd);
+		ft_putnbr_fd(-n, fd);
+	}
+	else if (n > 9)
+	{
+		ft_putnbr_fd((n / 10), fd);
+		ft_putnbr_fd((n % 10), fd);
+	}
+	else
+		ft_putchar_fd((n + '0'), fd);
 }
 /*int   main()
 {
-    ft_putnbr_fd(-2147483648, 1);
+	ft_putnbr_fd(47483648, 1);
 }*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 21:38:00 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/10/01 02:37:01 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/01 23:31:33 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,8 +40,8 @@ int	main(void)
 {
 	int	result1;
 	int	result2;
-	result1 = ft_atoi("  -2182b8");
+	result1 = ft_atoi("-2147483648");
 	printf("%i\n", result1);
-	result2 = atoi("  -2182b8");
+	result2 = atoi("-2147483648");
 	printf("%i\n", result2);
 }*/
