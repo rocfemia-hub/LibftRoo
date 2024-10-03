@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 02:44:01 by roo               #+#    #+#             */
-/*   Updated: 2024/10/03 15:36:56 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/10/03 23:02:05 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,13 +15,15 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-
+	char *aux_ptr;
+	
 	if (nmemb == SIZE_MAX && size == SIZE_MAX)
 	{
 		return (NULL);
 	}
 	ptr = malloc(nmemb * size);
-	if (ptr == '\0')
+	aux_ptr = (char *)ptr;
+	if (*aux_ptr == '\0')
 	{
 		return (NULL);
 	}
