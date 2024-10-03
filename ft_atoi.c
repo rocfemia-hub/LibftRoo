@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 21:38:00 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/10/03 02:50:50 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/03 15:37:20 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,16 @@
 static int	ft_overflow(unsigned long long num, int neg)
 {
 	if (neg == -1 && num > 9223372036854775807)
-		return(0);
+		return (0);
 	if (neg == 1 && num > 9223372036854775807)
-		return(-1);
+		return (-1);
 	return (num);
 }
-int		ft_atoi(const char *nptr)
+
+int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	sig;
+	int					i;
+	int					sig;
 	unsigned long long	result;
 
 	i = 0;
