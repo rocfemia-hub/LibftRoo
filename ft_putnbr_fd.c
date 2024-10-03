@@ -1,23 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
+/*   ft_putnbr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2024/09/30 18:45:59 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/10/01 13:22:52 by roo              ###   ########.fr       */
+/*   Created: 2024/10/01 03:01:35 by roo               #+#    #+#             */
+/*   Updated: 2024/10/01 16:06:12 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putchar_fd(char c, int fd)
+void				ft_putnbr_fd(int n, int fd)
 {
-	write(fd, &c, 1);
+    if (n == -2147483648)
+    {
+        ft_putstr_fd("-2147483648", fd);
+    }
+    else if (n < 0)
+    {
+        ft_putchar_fd('-', fd);
+        ft_putnbr_fd(-n, fd);
+    }
+    else if (n > 9)
+    {
+        ft_putnbr_fd((n / 10), fd);
+        ft_putnbr_fd((n % 10), fd);
+    }
+    else
+        ft_putchar_fd((n + '0'), fd);
 }
-/*int main (void)
+/*int   main()
 {
-	ft_putchar_fd('c', 1); //0, 1 y 2 son para consola
-	return(0);
+    ft_putnbr_fd(-2147483648, 1);
 }*/

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 10:58:41 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/30 21:51:28 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/10/03 05:06:02 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,8 @@
 # define LIBFT_H
 
 # include <stddef.h>
+# include <stdlib.h>
+# include <stdint.h>
 # include <unistd.h>
 
 // Parte_1

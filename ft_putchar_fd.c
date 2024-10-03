@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_putchar_fd.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 18:45:59 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/30 20:36:15 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/10/01 13:22:52 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,6 +18,6 @@ void	ft_putchar_fd(char c, int fd)
 }
 /*int main (void)
 {
-	ft_putchar_fd('c', 2); //0, 1 y 2 son para consola
+	ft_putchar_fd('c', 1); //0, 1 y 2 son para consola
 	return(0);
 }*/
