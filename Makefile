@@ -6,7 +6,7 @@
 #    By: roo <roo@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/20 11:13:01 by rocfemia          #+#    #+#              #
-#    Updated: 2024/10/03 23:03:16 by roo              ###   ########.fr        #
+#    Updated: 2024/10/03 23:41:13 by roo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,8 +28,8 @@ OBJ = $(SRC:.c=.o)
 all: $(NAME)
 
 $(NAME): $(OBJ)
-	ar rcs $(NAME) $(OBJ)
-
+	ar rcs $(NAME) $(OBJ) 
+# Busca q significa y dejalo aqui.
 clean:
 	rm -f $(OBJ)
 
