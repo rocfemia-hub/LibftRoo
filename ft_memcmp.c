@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/03 05:33:58 by roo               #+#    #+#             */
-/*   Updated: 2024/10/03 20:10:15 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/04 15:51:25 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	size_t		i;
+	size_t	i;
 	char	*aux1;
 	char	*aux2;
 
@@ -23,9 +23,9 @@ int	ft_memcmp(const void *s1, const void *s2, size_t n)
 	i = 0;
 	while (i < n)
 	{
-		if (aux1[i] > aux2[i])
+		if ((unsigned char)aux1[i] > (unsigned char)aux2[i])
 			return (1);
-		else if (aux1[i] < aux2[i])
+		else if ((unsigned char)aux1[i] < (unsigned char)aux2[i])
 			return (-1);
 		i++;
 	}

@@ -6,28 +6,28 @@
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 11:24:52 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/30 16:58:22 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/10/04 14:31:32 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t	ft_strlen(const char *s);
-
 char	*ft_strrchr(const char *s, int c)
 {
 	int	i;
 
-	i = ft_strlen(s) - 1;
-	while (s[i] >= 0)
+	i = ft_strlen(s);
+	while (i >= 0)
 	{
-		if (s[i] == c)
+		if (s[i] == (char)c)
 		{
 			return ((char *)&s[i]);
 		}
 		i--;
 	}
-	return (NULL);
+	if (s[i] == (char)c)
+		return ((char *)&s[i]);
+	return (0);
 }
 /*#include <stdio.h>
 int	main(void)

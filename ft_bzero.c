@@ -6,7 +6,7 @@
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 15:59:52 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/09/30 16:48:57 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/10/04 15:52:09 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,13 +14,15 @@
 
 void	ft_bzero(void *s, size_t n)
 {
+	size_t			i;
 	unsigned char	*ptr;
 
 	ptr = (unsigned char *)s;
-	while (n != '\0')
+	i = 0;
+	while (i < n)
 	{
-		*ptr++ = 0;
-		n--;
+		ptr[i] = 0;
+		i++;
 	}
 }
 /*#include <stdio.h>

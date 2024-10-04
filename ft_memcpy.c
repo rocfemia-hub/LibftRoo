@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 16:29:42 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/10/03 20:07:00 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/04 12:31:43 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t		i;
+	size_t	i;
 	char	*d;
 	char	*s;
 
@@ -30,6 +30,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 }
 /*#include <stdio.h>
 #include <string.h>
+
 int	main(void)
 {
 	char str1[8] = "Patatizo";

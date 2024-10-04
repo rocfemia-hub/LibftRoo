@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/01 02:44:01 by roo               #+#    #+#             */
-/*   Updated: 2024/10/03 23:02:05 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/04 18:18:41 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,27 +15,24 @@
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void	*ptr;
-	char *aux_ptr;
-	
-	if (nmemb == SIZE_MAX && size == SIZE_MAX)
-	{
+
+	if (nmemb == 0 || size == 0)
 		return (NULL);
-	}
 	ptr = malloc(nmemb * size);
-	aux_ptr = (char *)ptr;
-	if (*aux_ptr == '\0')
+	if (!ptr)
 	{
 		return (NULL);
 	}
 	ft_bzero(ptr, (nmemb * size));
 	return (ptr);
 }
-/*#include <stdio.h>
+/*
+#include <stdio.h>
 int	main(void)
 {
-	printf("%p\n", ft_calloc( 2, 2));
+	printf("%p\n", ft_calloc(2, 2));
 	printf("%s\n", (char *)ft_calloc( 2, 2));
-	//printf("%p\n", calloc( 2, 2));
+	printf("%p\n", calloc( 2, 2));
 	return(0);
 	//i = malloc(5 * sizeof(int));
 }*/
