@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   libft.h                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 10:58:41 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/10/04 13:37:36 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/10/07 11:59:25 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char				*ft_strnstr(const char *big, const char *little,
 int					ft_atoi(const char *nptr);
 
 void				*ft_calloc(size_t nmemb, size_t size);
-//char				*ft_strdup(const char *s);
+char				*ft_strdup(const char *s);
 
 // Parte_2
 

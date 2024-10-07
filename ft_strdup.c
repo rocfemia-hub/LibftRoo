@@ -1,0 +1,38 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2024/10/07 11:36:12 by roo               #+#    #+#             */
+/*   Updated: 2024/10/07 12:13:54 by roo              ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "libft.h"
+
+char				*ft_strdup(const char *s)
+{
+    char *ptr;
+    int i;
+    
+    i = 0;
+    if (!s)
+	{
+		return (NULL);
+	}
+	ptr = malloc(ft_strlen(s) * sizeof(char));
+    while (s[i] != '\0')
+    {
+        ptr[i] = s[i];
+		i++;
+    }
+    return (ptr);
+}
+/*#include <stdio.h>
+int main()
+{
+    printf("%s\n", ft_strdup("Patata"));
+	return(0);
+}*/
