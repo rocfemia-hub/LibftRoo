@@ -6,7 +6,7 @@
 #    By: roo <roo@student.42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/20 11:13:01 by rocfemia          #+#    #+#              #
-#    Updated: 2024/10/07 12:13:33 by roo              ###   ########.fr        #
+#    Updated: 2024/10/08 18:44:07 by roo              ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -29,7 +29,8 @@ all: $(NAME)
 
 $(NAME): $(OBJ)
 	ar rcs $(NAME) $(OBJ) 
-# Busca q significa y dejalo aqui.
+# AR para compilar una libreria con los objetos que le has pasado
+# RCS son flaggs -
 clean:
 	rm -f $(OBJ)
 
