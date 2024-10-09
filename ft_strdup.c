@@ -3,36 +3,37 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:36:12 by roo               #+#    #+#             */
-/*   Updated: 2024/10/07 12:13:54 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/09 15:41:59 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char				*ft_strdup(const char *s)
+char	*ft_strdup(const char *s)
 {
-    char *ptr;
-    int i;
-    
-    i = 0;
-    if (!s)
+	char	*ptr;
+	int		i;
+
+	i = 0;
+	if (!s)
 	{
 		return (NULL);
 	}
-	ptr = malloc(ft_strlen(s) * sizeof(char));
-    while (s[i] != '\0')
-    {
-        ptr[i] = s[i];
+	ptr = malloc(ft_strlen(s) * sizeof(char) + 1);
+	while (s[i] != '\0')
+	{
+		ptr[i] = s[i];
 		i++;
-    }
-    return (ptr);
+	}
+	ptr[i] = '\0';
+	return (ptr);
 }
 /*#include <stdio.h>
-int main()
+int	main(void)
 {
-    printf("%s\n", ft_strdup("Patata"));
+	printf("%s\n", ft_strdup("Patata"));
 	return(0);
 }*/
