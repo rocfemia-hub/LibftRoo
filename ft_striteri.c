@@ -3,18 +3,18 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/09 14:00:02 by roo               #+#    #+#             */
-/*   Updated: 2024/10/10 13:35:39 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/10 14:23:12 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -30,7 +30,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 		if (str[j] >= 97 && str[j] <= 122)
 			str[j] = str[j] - 32;
 		j++;
-	}		
+	}
 }
 //char	*ft_toupper_string(unsigned int j, char *str)
 //{
@@ -39,11 +39,12 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *));
 //		if (str[j] >= 97 && str[j] <= 122)
 //			str[j] = str[j] - 32;
 //		j++;
-//	}		
+//	}
 //	return (str);
 //}
-#include <string.h>
 #include <stdio.h>
+#include <string.h>
+
 int main ()
 {
 	char *str = strdup("PataTa");
