@@ -6,7 +6,7 @@
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 11:36:12 by roo               #+#    #+#             */
-/*   Updated: 2024/10/09 15:41:59 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/10/10 02:54:51 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,10 +19,12 @@ char	*ft_strdup(const char *s)
 
 	i = 0;
 	if (!s)
+		return (NULL);
+	ptr = malloc(ft_strlen(s) * sizeof(char) + 1);
+	if (!ptr)
 	{
 		return (NULL);
 	}
-	ptr = malloc(ft_strlen(s) * sizeof(char) + 1);
 	while (s[i] != '\0')
 	{
 		ptr[i] = s[i];
