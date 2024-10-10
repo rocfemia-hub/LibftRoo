@@ -6,7 +6,7 @@
 /*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/20 10:58:41 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/10/07 14:55:22 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/10 13:09:18 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -54,8 +54,8 @@ char				*ft_strdup(const char *s);
 //char				*ft_strtrim(const char *s1, const char *set);
 char				**ft_split(const char *s, char c);
 //char				*ft_itoa(int n);
-//char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
-//void				ft_striteri(char *s, void (*f)(unsigned int, char *));
+char				*ft_strmapi(const char *s, char (*f)(unsigned int, char));
+void				ft_striteri(char *s, void (*f)(unsigned int, char *));
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);

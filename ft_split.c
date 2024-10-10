@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
+/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:54:55 by roo               #+#    #+#             */
-/*   Updated: 2024/10/09 15:41:20 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/10/10 03:50:16 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -135,7 +135,7 @@ int	main(void)
 // malloc(ft_words_num() * (char *))
 // char **matrix;
 /*#include <stdio.h>
-int	main(ORIGINAL)
+int	main() //ORIGINAL
 {
 	char matrix[][] = "Me gustan las patatas"
 	printf("%s\n", ft_split("Me  gustan las patatas", ' '));
