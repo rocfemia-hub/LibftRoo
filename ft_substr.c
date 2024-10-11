@@ -6,7 +6,7 @@
 /*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 23:07:34 by roo               #+#    #+#             */
-/*   Updated: 2024/10/11 00:55:10 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/11 12:24:00 by roo              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,6 @@ char    *ft_substr(const char *s, unsigned int start, size_t len)
     ptr[j] = '\0';
     return(ptr);
 }
-//while(s[start] < s[len])
 /*#include <stdio.h>
 int main()
 {
