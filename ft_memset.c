@@ -6,7 +6,7 @@
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/18 16:10:58 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/10/04 15:52:00 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/10/12 15:59:42 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,3 +36,5 @@ int	main(void)
 	printf("%s\n", str);
 	return (0);
 }*/
+//todo lo que cambias en el ptr tabén se cambia en la s porque no está
+//haciendo una copia, esta está apuntando a esa dirección de memoria.

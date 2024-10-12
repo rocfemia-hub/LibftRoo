@@ -6,7 +6,7 @@
 /*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/10 17:35:22 by roo               #+#    #+#             */
-/*   Updated: 2024/10/10 18:35:22 by rocfemia         ###   ########.fr       */
+/*   Updated: 2024/10/12 16:04:58 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,6 @@ char	*ft_strjoin(const char *s1, const char *s2)
 /*#include <stdio.h>
 int	main(void)
 {
-	printf("%s\n", ft_strjoin("", ""));
+	printf("%s\n", ft_strjoin("Agua", "cate"));
 	return (0);
 }*/

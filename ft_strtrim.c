@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/11 18:28:13 by roo               #+#    #+#             */
-/*   Updated: 2024/10/12 05:14:51 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/12 08:01:41 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,7 @@ static size_t	ft_first(char const *s1, char const *set)
 			k++;
 			i++;
 			j = 0;
-		}	
+		}
 	}
 	return (k);
 }
@@ -63,7 +63,7 @@ static size_t	ft_last(char const *s1, char const *set)
 			k++;
 			i++;
 			j = 0;
-		}	
+		}
 	}
 	return (k);
 }
@@ -93,8 +93,8 @@ char	*ft_strtrim(char const *s1, char const *set)
 	return (str);
 }
 /*#include <stdio.h>
-int main()
+int	main(void)
 {
-    printf("%s\n", ft_strtrim("jaaeijjPepinojjj", "jaei"));
-    return(0);
+	printf("%s\n", ft_strtrim("jaaeijjPepinojjj", "jaei"));
+	return(0);
 }*/

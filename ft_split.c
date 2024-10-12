@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/07 14:54:55 by roo               #+#    #+#             */
-/*   Updated: 2024/10/10 03:50:16 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/12 16:28:08 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,9 +28,10 @@ static int	ft_words_num(const char *s, char c)
 	return (j);
 }
 
-static int	ft_lett_words(const char *s, char c, int i, int k)
+static int	ft_lett_words(const char *s, char c, int k)
 {
 	int	lett_len;
+	int	i;
 
 	i = 0;
 	while (s[i] != '\0')
@@ -80,7 +81,7 @@ static char	**ft_split2(const char *s, char c, char **matrix)
 			i++;
 		if (s[i] != '\0')
 		{
-			word_len = ft_lett_words(s, c, i, k);
+			word_len = ft_lett_words(s, c, k);
 			matrix[k] = (char *)malloc((word_len + 1) * sizeof(char));
 			if (!matrix[k])
 				return (ft_free_free(matrix), NULL);
@@ -141,9 +142,9 @@ int	main() //ORIGINAL
 	printf("%s\n", ft_split("Me  gustan las patatas", ' '));
 }*/
 
-/* int main(void)
+/*int main(void)
 {
-	char	s[] = "Patataas";
+	char	s[] = "Pat ata as";
 	char	c = ' ';
 	char	**str;
 

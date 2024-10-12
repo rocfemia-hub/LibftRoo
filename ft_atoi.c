@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: roo <roo@student.42.fr>                    +#+  +:+       +#+        */
+/*   By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/30 21:38:00 by rocfemia          #+#    #+#             */
-/*   Updated: 2024/10/12 07:50:02 by roo              ###   ########.fr       */
+/*   Updated: 2024/10/12 08:00:12 by rocfemia         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@ int	ft_atoi(const char *nptr)
 		result = result * 10 + nptr[i] - '0';
 		if (result * sig > INT_MAX)
 			return (-1);
-		if (result * sig  < INT_MIN)
+		if (result * sig < INT_MIN)
 			return (0);
 		i++;
 	}
@@ -40,12 +40,13 @@ int	ft_atoi(const char *nptr)
 }
 /*#include <stdio.h>
 #include <stdlib.h>
+
 int	main(void)
 {
 	int	result1;
 	int	result2;
-	result1 = ft_atoi("9999999999999999999999999999999999999999999999999999999999");
+	result1 = ft_atoi("9999999999999999999999999999999999999999999999999999999");
 	printf("%i\n", result1);
-	result2 = atoi("9999999999999999999999999999999999999999999999999999999999");
+	result2 = atoi("9999999999999999999999999999999999999999999999999999999");
 	printf("%i\n", result2);
 }*/

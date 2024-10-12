@@ -3,16 +3,16 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: roo <roo@student.42.fr>                    +#+  +:+       +#+         #
+#    By: rocfemia <rocfemia@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/09/20 11:13:01 by rocfemia          #+#    #+#              #
-#    Updated: 2024/10/12 05:15:37 by roo              ###   ########.fr        #
+#    Updated: 2024/10/12 14:52:43 by rocfemia         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME = libft.a
 
-CC = gcc
+CC = cc
 CFLAGS = -Wall -Wextra -Werror
 
 SRC = ft_isalpha.c ft_isdigit.c ft_isalnum.c ft_isascii.c ft_isprint.c \
@@ -38,3 +38,5 @@ fclean: clean
 	rm -f $(NAME)
 
 re: fclean all
+
+.PHONY: clean fclean re
